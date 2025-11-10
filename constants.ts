@@ -54,37 +54,37 @@ export const PREDEFINED_WIDGETS: PredefinedWidget[] = [
     },
     {
         "id": "8",
-        "title": "Device Usage Breakdown",
+        "title": "Show departments by efficiency",
         "chart_type": "donut",
-        "sql": "SELECT Device, Users FROM DeviceUsage",
+        "sql": "SELECT  Department,  AVG(EfficiencyPercent) AS AvgEfficiency FROM GarmentPerformance GROUP BY Department ORDER BY AvgEfficiency DESC",
         "icon": DonutChartIcon
     },
-    {
+    {   
         "id": "9",
-        "title": "Monthly Website Traffic",
-        "chart_type": "area",
-        "sql": "SELECT Month, Visitors, PageViews FROM WebsiteTraffic ORDER BY MonthID",
-        "icon": AreaChartIcon
+        "title": "Total Bonus ",
+        "chart_type": "card",
+        "sql": "SELECT SUM(Bonus) AS TotalProduction FROM GarmentPerformance",
+        "icon": CardIcon
     },
     {
         "id": "10",
-        "title": "Player Skill Comparison",
-        "chart_type": "radar",
-        "sql": "SELECT Skill, PlayerA, PlayerB FROM PlayerSkills",
-        "icon": RadarChartIcon
+        "title": "Total Salary",
+        "chart_type": "card",
+        "sql": "SELECT SUM(Salary) AS TotalProduction FROM GarmentPerformance",
+        "icon": CardIcon
     },
     {
         "id": "11",
-        "title": "Sales Funnel Stages",
-        "chart_type": "funnel",
-        "sql": "SELECT Stage, Value FROM SalesFunnel ORDER BY StageOrder",
-        "icon": FunnelChartIcon
+        "title": "Total total output",
+        "chart_type": "card",
+        "sql": "SELECT SUM(TotalOutputValue) AS TotalOutputValue FROM GarmentPerformance",
+        "icon": CardIcon
     },
     {
         "id": "12",
-        "title": "Quarterly Goal Completion",
-        "chart_type": "radialBar",
-        "sql": "SELECT Quarter, Percentage FROM QuarterlyGoals",
-        "icon": RadialBarChartIcon
+        "title": "Total DefectiveUnits",
+        "chart_type": "card",
+        "sql": "SELECT SUM(DefectiveUnits) AS TotalProduction FROM GarmentPerformance",
+        "icon": CardIcon
     }
 ];
