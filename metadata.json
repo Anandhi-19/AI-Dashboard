@@ -1,0 +1,5 @@
+{
+  "name": "Copy of AI SQL Dashboard",
+  "description": "An AI-powered dashboard that connects to a SQL Server to visualize data. Users can create widgets using natural language prompts or select from a pre-defined library of analytics.",
+  "requestFramePermissions": []
+}
